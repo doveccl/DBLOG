@@ -1,0 +1,14 @@
+<header class="header">
+  <a class="site-link" href="{{ site.home }}">{{ site.title }}</a>
+  <nav class="site-nav">
+    {% for link in site.links %}
+    <a class="page-link" href="{{ link[1] }}">{{ link[0] }}</a>
+    {% endfor %}
+  </nav>
+  <i class="drop-nav material-icons" open="off">expand_more</i>
+  <ul class="menu-nav">
+    {% for link in site.links %}
+    <li><a href="{{ link[1] }}">{{ link[0] }}</a></li>
+    {% endfor %}
+  </ul>
+</header>

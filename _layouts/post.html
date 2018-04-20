@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="content-wrapper">
+  <div class="content article">
+    <div class="post-head">
+      <span class="post-title">{{ page.title }}</span>
+      <span class="post-date">Published on {{ page.date | date: "%b %-d, %Y" }}</span>
+    </div>
+    <div class="article">{{ content }}</div>
+  </div>
+
+  <div class="content">
+    <div id="disqus_thread"></div>
+  </div>
+
+  <div class="content">
+    <div class="post-recent">
+      <div class="post-prev">
+        Previous:
+        {% if page.previous %}
+        <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+        {% else %}
+        None
+        {% endif %}
+      </div>
+      <div class="post-next">
+        Next:
+        {% if page.next %}
+        <a href="{{ page.next.url }}">{{ page.next.title }}</a>
+        {% else %}
+        None
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

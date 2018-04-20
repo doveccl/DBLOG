@@ -1,2 +1,1 @@
-# DBLOG
-Simple theme for Jekyll
+Doveccl GitHub Page

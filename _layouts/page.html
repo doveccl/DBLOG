@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="content-wrapper">
+  <div class="content article">
+    <div class="post-head">
+      <span class="post-title">{{ page.title }}</span>
+      <span class="post-date">Published on {{ page.date | date: "%b %-d, %Y" }}</span>
+    </div>
+    <div class="article">{{ content }}</div>
+  </div>
+
+  <div class="content">
+    <div id="disqus_thread"></div>
+  </div>
+</div>

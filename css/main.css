@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+  background: #EFEFEF;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "????", Arial, sans-serif;
+}
+body::-webkit-scrollbar{ width: 0; }
+body * { margin: 0; }
+
+.header {
+  top: 0;
+  height: 50px;
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 191, 255, 0.9);
+  box-shadow: #CCC 0 0 10px;
+}
+.header a {
+  transition: ease-in-out 500ms all;
+}
+.header a:hover {
+  text-shadow: #FFF 0 0 5px;
+}
+.site-link {
+  color: #FFF;
+  font-size: 30px;
+  margin: 0 50px;
+  font-weight: bolder;
+  text-decoration: unset;
+  display: block;
+}
+.site-nav {
+  margin: 0 50px;
+  display: block;
+}
+.page-link {
+  color: #FFF;
+  font-size: 20px;
+  margin-left: 20px;
+  text-decoration: unset;
+}
+.drop-nav {
+  color: #FFF;
+  font-size: 30px;
+  display: none;
+  margin: 0 50px;
+  cursor: pointer;
+  transition: ease-in-out 500ms all;
+}
+.drop-nav[open=on] {
+  transform: rotate(180deg);
+}
+.drop-nav[open=off]+.menu-nav {
+  max-height: 0;
+  transition: ease-in-out 500ms all;
+}
+.drop-nav[open=on]+.menu-nav {
+  max-height: 100%;
+  transition: ease-in-out 500ms all;
+}
+.menu-nav {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  overflow-y: hidden;
+  background: rgba(0, 191, 255, 0.5);
+}
+.menu-nav a {
+  color: #FFF;
+  font-size: 20px;
+  padding: 10px 40px;
+  text-decoration: unset;
+  display: block;
+}
+.menu-nav a:hover {
+  background: rgb(0, 191, 255);
+}
+@media only screen and (max-width: 800px) {
+  .drop-nav, .menu-nav { display: block; }
+  .site-nav { display: none; }
+}
+
+.post-foot {
+  text-align: center;
+  margin-top: 20px;
+}
+.read-more {
+  color: #FFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: rgb(0, 191, 255);
+  text-decoration: unset;
+}
+.read-more:hover {
+  opacity: 0.8;
+}
+
+.page_paginator {
+  display: flex;
+  justify-content: space-between;
+}
+.page_previous a, .page_next a {
+  color: #333;
+  font-weight: bolder;
+  text-decoration: unset;
+}
+.page_previous span, .page_next span {
+  color: #CCC;
+}
+
+.post-head {
+  margin-bottom: 10px;
+}
+.post-title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 5px;
+  display: block;
+}
+.post-date {
+  color: #CCC;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+}
+.post-title a {
+  color: #000;
+  position: relative;
+  text-decoration: unset;
+}
+.post-title a:after {
+  content: "";
+  position: absolute;
+  border-bottom: #666 solid 2px;
+  bottom: -3px;
+  width: 0;
+  left: 100%;
+  transition: width 500ms, left 500ms;
+}
+.post-title a:hover:after {
+  left: 0;
+  width: 100%;
+  transition: width 500ms;
+}
+
+.content-wrapper {
+  width: 100%;
+  margin: 20px 0;
+}
+.content {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 20px 30px;
+  background: #FFF;
+  border-radius: 5px;
+  box-shadow: #CCC 0 0 10px;
+}
+
+.article img {
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: #CCC 0 0 5px;
+  transition: ease-in-out 500ms all;
+}
+.article img:hover {
+  box-shadow: #CCC 0 0 20px;
+}
+.article div.highlight {
+  max-width: 100%;
+  border-radius: 3px;
+  overflow-x: scroll;
+}
+.article pre.highlight {
+  margin: 10px;
+}
+.article code.highlighter-rouge {
+  font-size: 1.2em;
+  padding: 2px 4px;
+  color: #B94A48;
+}
+.article a {
+  color: #666;
+}
+.article hr {
+  border: 0;
+  border-bottom: #CCC solid 1px;
+  margin-bottom: 10px;
+}
+.article h1 {
+  margin-bottom: 10px;
+}
+.article h2 {
+  margin-bottom: 10px;
+  border-bottom: #CCC solid 1px;
+}
+.article h3 {
+  margin-bottom: 10px;
+}
+.article h4 {
+  margin-bottom: 10px;
+}
+.article h5 {
+  margin-bottom: 10px;
+}
+.article h6 {
+  margin-bottom: 10px;
+}
+.article p {
+  margin-bottom: 10px;
+}
+.article ul {
+  margin-bottom: 10px;
+}
+.article ol {
+  margin-bottom: 10px;
+}
+.article li {
+  margin-bottom: 5px;
+}
+.article table {
+  margin-bottom: 10px;
+}
+.article blockquote {
+  padding-left: 10px;
+  border-left: #CCC solid 5px;
+}
+.article div:not([class*="aplayer"]) {
+  margin-bottom: 10px;
+}
+
+.post-recent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.post-recent a {
+  color: #666;
+  font-weight: bolder;
+  text-decoration: unset;
+}
+
+.footer {
+  text-align: center;
+  margin: 20px;
+  color: #CCC;
+}
+.footer a {
+  color: #CCC;
+}

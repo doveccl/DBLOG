@@ -17,22 +17,23 @@ document.body.addEventListener('click', function() {
 });
 
 var aplayer = document.querySelectorAll('.aplayer');
-for (var ap of aplayer)
+for (var ap of aplayer) {
   try {
+    var _a = ap.getAttribute('auto');
     new APlayer({
       lrcType: 3,
       container: ap,
-      autoplay: true,
-      audio: JSON.parse(ap.textContent)
+      audio: JSON.parse(ap.textContent),
+      autoplay: _a == null ? true : _a == 'true'
     });
   } catch (e) {
     console.warn('load aplayer error');
   }
+}
 
 renderMathInElement(document.body, {
   delimiters: [
-    {left: '$', right: '$', display: false},
-    {left: '$$', right: '$$', display: true}
+    {left: '$', right: '$', display: false}
   ]
 });
 

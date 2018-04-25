@@ -106,15 +106,28 @@ body * { margin: 0; padding: 0; }
 
 .page_paginator {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
-.page_previous a, .page_next a {
-  color: #333;
-  font-weight: bolder;
+.page_ctr {
+  display: inline-flex;
+  align-items: center;
   text-decoration: unset;
 }
-.page_previous span, .page_next span {
+.page_ctr i {
+  font-style: normal;
+  vertical-align: middle;
+  display: inline-block;
+}
+.page_ctr.valid {
+  color: #333;
+}
+.page_ctr.invalid {
   color: #CCC;
+}
+.icons-addon {
+  margin: 0 0.5em;
+  font-size: 20px;
 }
 
 .post-head {

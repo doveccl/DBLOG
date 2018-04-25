@@ -12,7 +12,7 @@ Demo: https://ecl.me/
 
 ## Install
 
-Just copy files to your `gh-pages` branch
+Just copy files to your project
 
 More information can be found here:
 
